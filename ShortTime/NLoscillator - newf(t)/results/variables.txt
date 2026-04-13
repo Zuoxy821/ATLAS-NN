@@ -1,0 +1,157 @@
+nonlinearOscillator_all_results.mat 文件变量说明
+
+一、时间网格（Time grids）
+
+t_net
+神经网络预测所使用的时间网格，对应所有 NN 输出（exp / tanh / v2）。
+
+t_num
+数值积分得到的真解（ground truth）对应的时间网格。
+
+t_s
+Symplectic Euler 方法使用的时间网格。
+
+t_s100
+Symplectic Euler 方法在时间步数增加 100 倍情况下所使用的时间网格。
+
+二、Ground truth solution
+
+x_num
+位置真解 x(t)。
+
+px_num
+动量真解 p_x(t)。
+
+E_ex
+真解对应的系统能量 E(t)。
+
+三、Neural Network predictions
+
+x_exp
+采用 f(t) = 1 − exp(−t) 形式的神经网络预测位置 x(t)。
+
+px_exp
+采用 f(t) = 1 − exp(−t) 形式的神经网络预测动量 p_x(t)。
+
+E_exp
+exp 形式神经网络预测轨道对应的能量 E(t)。
+
+x_tanh
+采用 f(t) = tanh(m t) 形式的神经网络预测位置 x(t)。
+
+px_tanh
+采用 f(t) = tanh(m t) 形式的神经网络预测动量 p_x(t)。
+
+E_tanh
+tanh 形式神经网络预测轨道对应的能量 E(t)。
+
+x_v2
+采用 f(t) = (1 − exp(−α t)) / (1 + β exp(−α t)) 形式的神经网络预测位置 x(t)。
+
+px_v2
+采用 v2 形式神经网络预测的动量 p_x(t)。
+
+E_v2
+v2 形式神经网络预测轨道对应的能量 E(t)。
+
+四、Symplectic Euler 数值结果
+
+x_s
+Symplectic Euler 方法计算得到的位置 x(t)。
+
+p_s
+Symplectic Euler 方法计算得到的动量 p_x(t)。
+
+E_s
+Symplectic Euler 方法对应的系统能量 E(t)。
+
+x_s100
+时间步数增加 100 倍的 Symplectic Euler 方法计算得到的位置 x(t)。
+
+p_s100
+时间步数增加 100 倍的 Symplectic Euler 方法计算得到的动量 p_x(t)。
+
+E_s100
+时间步数增加 100 倍的 Symplectic Euler 方法对应的系统能量 E(t)。
+
+五、随时间变化的误差（相对于真解）
+
+dx_exp
+exp 形式神经网络的位置误差，定义为 dx_exp = x_num − x_exp。
+
+dp_exp
+exp 形式神经网络的动量误差，定义为 dp_exp = px_num − px_exp。
+
+dx_tanh
+tanh 形式神经网络的位置误差，定义为 dx_tanh = x_num − x_tanh。
+
+dp_tanh
+tanh 形式神经网络的动量误差，定义为 dp_tanh = px_num − px_tanh。
+
+dx_v2
+v2 形式神经网络的位置误差，定义为 dx_v2 = x_num − x_v2。
+
+dp_v2
+v2 形式神经网络的动量误差，定义为 dp_v2 = px_num − px_v2。
+
+dx_s
+Symplectic Euler 方法的位置误差，定义为 dx_s = x_num − x_s。
+
+dp_s
+Symplectic Euler 方法的动量误差，定义为 dp_s = px_num − p_s。
+
+dx_s100
+时间步数增加 100 倍的 Symplectic Euler 方法的位置误差。
+
+dp_s100
+时间步数增加 100 倍的 Symplectic Euler 方法的动量误差。
+
+六、error
+
+L2_x_exp
+exp 形式神经网络在整个时间区间内的位置 L2 误差。
+
+L2_px_exp
+exp 形式神经网络在整个时间区间内的动量 L2 误差。
+
+L2_x_tanh
+tanh 形式神经网络在整个时间区间内的位置 L2 误差。
+
+L2_px_tanh
+tanh 形式神经网络在整个时间区间内的动量 L2 误差。
+
+L2_x_v2
+v2 形式神经网络在整个时间区间内的位置 L2 误差。
+
+L2_px_v2
+v2 形式神经网络在整个时间区间内的动量 L2 误差。
+
+MSE_x_exp
+exp 形式神经网络在整个时间区间内的位置均方误差（MSE）。
+
+MSE_px_exp
+exp 形式神经网络在整个时间区间内的动量均方误差（MSE）。
+
+MSE_x_tanh
+tanh 形式神经网络在整个时间区间内的位置均方误差（MSE）。
+
+MSE_px_tanh
+tanh 形式神经网络在整个时间区间内的动量均方误差（MSE）。
+
+MSE_x_v2
+v2 形式神经网络在整个时间区间内的位置均方误差（MSE）。
+
+MSE_px_v2
+v2 形式神经网络在整个时间区间内的动量均方误差（MSE）。
+
+L2_x_euler
+Symplectic Euler 方法在整个时间区间内的位置 L2 误差。
+
+L2_px_euler
+Symplectic Euler 方法在整个时间区间内的动量 L2 误差。
+
+MSE_x_euler
+Symplectic Euler 方法在整个时间区间内的位置均方误差（MSE）。
+
+MSE_px_euler
+Symplectic Euler 方法在整个时间区间内的动量均方误差（MSE）。
