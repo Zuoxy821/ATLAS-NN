@@ -1,0 +1,42 @@
+=== Error comparison for all loaded models ===
+
+Model: HNN  (f(t) = 1 - exp(-t))
+L2_x   = 1.143852e+01
+L2_y   = 1.010926e+01
+L2_px  = 9.664525e+00
+L2_py  = 9.156358e+00
+MSE_x  = 1.308397e-01
+MSE_y  = 1.021972e-01
+MSE_px = 9.340305e-02
+MSE_py = 8.383890e-02
+
+Model: TAHNN  (f(t) = tanh(m t))
+L2_x   = 1.368937e+01
+L2_y   = 9.585649e+00
+L2_px  = 1.177949e+01
+L2_py  = 8.427128e+00
+MSE_x  = 1.873990e-01
+MSE_y  = 9.188466e-02
+MSE_px = 1.387563e-01
+MSE_py = 7.101649e-02
+
+Model: TAHNN  (f(t) = (1-exp(-¦Át))/(1+¦Â exp(-¦Át)))
+L2_x   = 1.372733e+00
+L2_y   = 1.145589e+00
+L2_px  = 1.179077e+00
+L2_py  = 9.339317e-01
+MSE_x  = 1.884395e-03
+MSE_y  = 1.312374e-03
+MSE_px = 1.390223e-03
+MSE_py = 8.722285e-04
+
+Model: Symplectic Euler
+L2_x   = 1.671075e+00
+L2_y   = 1.654442e+00
+L2_px  = 1.254179e+00
+L2_py  = 1.108509e+00
+MSE_x  = 2.792492e-03
+MSE_y  = 2.737179e-03
+MSE_px = 1.572965e-03
+MSE_py = 1.228793e-03
+
